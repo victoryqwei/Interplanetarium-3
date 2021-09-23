@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset=utf-8>
+		<title>Client-Server Networking</title>
+		<link rel="icon" href="images/favicon.png">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+		<style>
+			body { margin: 0; overflow: hidden}
+			canvas {
+				z-index: 0;
+				outline: 1px solid black;
+			}
+		</style>
+	</head>
+	
+	<body>
+		
+		<canvas id="game-canvas"></canvas>
+
+		<!-- Util -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/ola"></script>
+		<script src="javascripts/util/socket.io.js"></script>
+
+		<script>
+			// Instantiate the canvas
+			window.canvas = document.getElementById("game-canvas");
+			window.ctx = canvas.getContext("2d");
+			canvas.width = 1000//window.innerWidth;
+			canvas.height = 1000//window.innerHeight;
+			$(window).resize(function () {
+				canvas.width = 1000//window.innerWidth;
+				canvas.height = 1000//window.innerHeight;
+			})
+		</script>
+
+		<!-- Game Files -->
+		<script type="module" crossorigin="anonymous" src="javascripts/game/input.js"></script>
+		<script type="module" crossorigin="anonymous" src="javascripts/game/main.js"></script>
+
+	</body>
+</html>
