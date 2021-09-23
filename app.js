@@ -29,6 +29,7 @@ var public = __dirname + '/public/';
 app.use(express.static(path.join(__dirname, 'public')));
 app.use((req, res) => res.sendFile(`${__dirname}/public/index.html`))
 
+// POPOPOPOPOPO
 
 // Handle player connection
 io.on('connection', function(socket) {
