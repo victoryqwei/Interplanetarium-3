@@ -28,11 +28,11 @@
 			// Instantiate the canvas
 			window.canvas = document.getElementById("game-canvas");
 			window.ctx = canvas.getContext("2d");
-			canvas.width = 1000//window.innerWidth;
-			canvas.height = 1000//window.innerHeight;
+			canvas.width = window.innerWidth;
+			canvas.height = window.innerHeight;
 			$(window).resize(function () {
-				canvas.width = 1000//window.innerWidth;
-				canvas.height = 1000//window.innerHeight;
+				canvas.width = window.innerWidth;
+				canvas.height = window.innerHeight;
 			})
 		</script>
 
